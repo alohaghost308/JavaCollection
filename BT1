@@ -1,0 +1,49 @@
+package demo;
+import java.lang.Math;
+import java.util.Scanner;
+import java.util.TimeZone;
+import java.util.concurrent.ConcurrentHashMap.KeySetView;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.TimeZone;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+public class Demo {
+	
+	
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.println("nhap so phan tu:");
+		n = sc.nextInt();
+		
+		List<Integer> list = new ArrayList<Integer>(n);
+		System.out.println("Nhap cac phan tu:");
+		for(int i = 0; i<n;i++) {
+			System.out.println("nhap phan tu thu"+i+":" );
+			list.add(i, sc.nextInt());
+			
+		}
+		System.out.println("Cac so nguyen to trong dang sach:");
+		for(int i = 0; i<n;i++) {
+			int k=list.get(i);
+			int dem=0;
+				for(int j =2;j<k;j++) {
+					if(k%j == 0) {
+						dem =dem+1;
+					}
+				}
+			if(dem == 0 || k == 2|| k ==1) {
+				System.out.print(k+" ");
+			}
+		}
+		
+}
+}	
